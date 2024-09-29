@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lection_2:Основы Javascript</title>
+	</head>
+	<body>
+		<button onclick="alert('товар добавлен в корзину');">Купить</button>
+		<a onclick="confirm('Закрыть каталог');" href="#">Закрыть диалог</a>
+
+		<script>
+			// -----------------------------------------------Операторы: сравнение значений
+			// console.log(2 == 2);
+			// console.log(3 == 6);
+			// console.log("2" == 2); // неправильно сравнивать строку и число
+			// console.log(2 === 2);
+			// console.log("2" === 2); // === - сравнивает и типы и данные
+
+			// console.log(3 !== 5);
+			// console.log(3 != "3");
+
+			//-------------------------------------------------------Сравнение < >
+			// console.log(1 === "1");
+			// console.log(1 == false);
+			// console.log(null !== 1);
+
+			// //Унарные и бинарные операторы
+			// let age;
+			// console.log((age = 20));
+			// console.log((age = age + 1));
+			// console.log(age++);
+			// console.log(++age);
+
+			// //Конкотенация строк
+			// console.log("Привет" + " как");
+			// console.log("Привет, твой возраст " + age + " года");
+			// console.log(`Привет, твой возраст ${age} года.`); //самый удобный вариант
+
+			// //Методы Alert, Promt, confirm
+			// //Alert - всплывающая подсказка
+			// console.log(alert("Hello world"));
+			// //Prompt() - всплывающее окно с вопросом
+			// prompt("Сколько вам лет?", 30);
+			// //Confirm()
+			// confirm();
+
+			//----------------------------------------Принципы ветвления, визуализация, блок-схемы
+
+			// let userAnswer = prompt("Зимой и летом одним цветом");
+
+			// if (userAnswer === "") {
+			// 	console.log("Пусто");
+			// } else {
+			// 	if (userAnswer === "елка") {
+			// 		alert("Молодец!");
+			// 	} else {
+			// 		alert("Не угадал");
+			// 	}
+			// }
+
+			// if (userAnswer === "") {
+			// 	alert("Пустое значение");
+			// } else if (userAnswer === "елка") {
+			// 	alert("Молодец!");
+			// } else {
+			// 	alert("Не угадал");
+			// }
+
+			// if (userAnswer.toLowerCase() === "елка") {
+			// 	alert("Молодец!");
+			// } else {
+			// 	alert("Не угадал");
+			// }
+
+			// (условие) ? ДА : НЕТ
+
+			//тернарный оператор!
+			//userAnswer === "елка" ? alert("Молодец!") : alert("Не угадал");
+
+			//alert(2 > 3 ? "скидки" : "нет скидок");
+
+			//alert(userAnswer === "елка" ? "Молодец!" : "Не угадал");
+
+			//---------------------------------------Явная типизация - Проверка на пароль
+
+			// let pass = prompt("Введите пароль");
+			// pass = Number(pass); //преобразует переменную к числу
+			// /*pass = String(pass); // преобразовать к строке */ pass;
+			// if (pass === 123) {
+			// 	alert('Проходим дальше');
+			// } else {
+			// 	alert('Нельзя дальше')
+			// }
+
+			let pass = Number(prompt("Введите пароль"));
+			alert(pass === 123 ? "Проходим дальше" : "Нельзя дальше");
+		</script>
+	</body>
+</html>
