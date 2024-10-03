@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Урок 6. Семинар</title>
+	</head>
+	<body>
+		<script>
+			// //1.1
+			// function greetings() {
+			//     let userName = prompt('Введите имя');
+			//     let userSecondName = prompt('Введите фамилию');
+			//     let userAge = prompt('Введите ваш возраст');
+			//     alert(Привет ${userAge} ${userSecondName} с
+			// возрастом ${userAge});
+			// }
+
+			// greetings();
+
+			// //1.2
+			// const sqrt = (a) => a * a;
+			// sqrt(4);
+
+			// //1.3
+			// function ifPlus(param1) {
+			//     console.log((param1 >= 0) ? '++++++' : '-------');
+			// }
+			// ifPlus(1);
+			// ifPlus(-5);
+
+			// //2.1
+			// const summNumbers = (a,b,c) => a + b + c;
+			// summNumbers(2,3,5);
+
+			// //2.2
+			// let param1 = 1;
+			// let param2 = 2;
+			// let param3 = 3;
+
+			// summNumbers(param1, param2, param3);
+
+			// 2.3
+			// 4
+			// 9
+			// 25
+
+			// //3.1
+			// const sqrtNumber = (num) => Math.sqrt(num);
+			// sqrtNumber(3);
+			// // 1.7320508075688772
+			// sqrtNumber(4);
+			// // 2
+
+			// //3.2
+			// function minValue(a,b) {
+			//     return ((a > b) ? b : a);
+			// }
+
+			// minValue(1,2);
+
+			// //4.1
+			// function whatIsDay() {
+			//     let day = Number(prompt('Введите число от 1 до 7'));
+			//     if (day < 1 && day >7) {
+			//         console.log('Вы ввели некорректное число. Попробуйте еще раз');
+			//     } else if (day === 1){
+			//         console.log('Понедельник');
+			//     } else if (day === 2){
+			//         console.log('Вторник');
+			//     } else if (day === 3){
+			//         console.log('Среда');
+			//     } else if (day === 4){
+			//         console.log('Четверг');
+			//     } else if (day === 5){
+			//         console.log('Пятница');
+			//     } else if (day === 6){
+			//         console.log('Суббота');
+			//     } else if (day === 7){
+			//         console.log('Воскресенье');
+			//     }
+			// }
+
+			// whatIsDay();
+
+			//4.2
+			function greetings(name) {
+				var date = new Date();
+				if (date.getHours() >= 4 && date.getHours() <= 10) {
+					console.log(`Доброе утро, ${name}`);
+				} else if (date.getHours() > 10 && date.getHours() < 17) {
+					console.log(`Добрый день, ${name}`);
+				} else if (date.getHours() >= 17 && date.getHours() <= 22) {
+					console.log(`Добрый вечер, ${name}`);
+				} else if (date.getHours() > 22) {
+					console.log(`Доброй ночи, ${name}`);
+				} else if (date.getHours() >= 1 && date.getHours() < 4) {
+					console.log(`Доброй ночи, ${name}`);
+				}
+			}
+
+			greetings("Bro");
+		</script>
+	</body>
+</html>
