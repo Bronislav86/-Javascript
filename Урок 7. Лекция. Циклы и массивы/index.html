@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!-- <button onclick="counterClickButton();">Click</button> -->
+		<script>
+			// let pass;
+			// let count = 0;
+			// do {
+			// 	if (count >= 3) {
+			// 		alert("Пароль неверный.");
+			// 	}
+			// 	pass = Number(prompt("Введите с клавиатуры пароль"));
+			// 	count++;
+			// } while (pass !== 234);
+
+			// for (let i = 0; i <= 3; i++) {
+			// 	pass = Number(prompt("Введите с клавиатуры пароль"));
+			// 	if (pass === 234) {
+			// 		break;
+			// 	}
+			// }
+			// alert("Пароль неверный.");
+			// let count = 0;
+			// alert(`Вы нажали на кнопку ${count} раз`);
+			// function counterClickButton() {
+			// 	alert(++count);
+			// 	console.log(count);
+			// }
+			//-----------------------------МАССИВЫ------------------//
+			// const arr = [1, 2, "hello", 4, 5, 9];
+			// console.log(arr);
+			// console.log(arr[1]);
+			// console.log(arr.length);
+			// console.log(arr[arr.length - 1]);
+
+			// const user = [];
+
+			// user.push(prompt("Ваше имя"));
+			// user.push(Number(prompt("Ваш возраст")));
+
+			// console.log(user);
+
+			// const numbers = [2, 3, 19, 15];
+
+			// alert(`Запомни цифры ${numbers}`);
+
+			// console.log(numbers.pop());
+			// console.log(numbers);
+
+			// const word = "example";
+			// const arrWord = word.split("");
+			// const upWord = arrWord.pop();
+			// arrWord.push(upWord.toLocaleUpperCase());
+			// console.log(arrWord.join(""));
+			const arr = [1, 2, 3, 7, 19, 7, 13, 3];
+
+			for (let i = 0; i < arr.length; i++) {
+				const element = arr[i];
+				console.log(element);
+			}
+
+			console.log("--------------------------------------------------");
+
+			for (let i = 0; i < arr.length; i++) {
+				const element = arr[i];
+				if (element >= 5) {
+					console.log(element);
+				} else {
+					continue;
+				}
+			}
+
+			console.log("--------------------------------------------------");
+
+			console.log(arr.indexOf("3"));
+
+			console.log("--------------------------------------------------");
+
+			const arrAswers = ["елка", "ёлка", "ель"];
+			const userAnswer = prompt("Зимой и летом одним цветом?");
+
+			for (let i = 0; i < arrAswers.length; i++) {
+				const element = arrAswers[i];
+				if (element === userAnswer) {
+					console.log("Молодец!");
+					break;
+				} else {
+					continue;
+				}
+			}
+		</script>
+	</body>
+</html>
