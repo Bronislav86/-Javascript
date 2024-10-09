@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			const car = {
+				maker: "Audi",
+				model: "A5",
+				year: 2003,
+				color: "red",
+				pasangers: 2,
+				power: 240,
+				odometer: 0,
+			};
+
+			console.log(Object.keys(car)); //вернет массив из ключей объекта
+
+			console.log(Object.values(car)); // вернет значения ключей
+			/*
+      0:"Audi"
+      1:"A5"
+      2:2003
+      3:"red"
+      4:2
+      5:240
+      6:0
+      length:7*/
+
+			console.log(Object.entries(car)); //вернет массив с массивами из ключа со значением
+		</script>
+	</body>
+</html>

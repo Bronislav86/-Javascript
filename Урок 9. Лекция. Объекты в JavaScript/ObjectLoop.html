@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			// for (const key in object) {
+			// 	if (Object.prototype.hasOwnProperty.call(object, key)) {
+			// 		const element = object[key];
+			// 	}
+			// }
+
+			const productTest = {
+				text: "hello",
+				price: 1000,
+			};
+			//Пробегаемся по ключам
+			for (const key in productTest) {
+				console.log(key);
+			}
+			//Пробегаемся по значениям
+			for (const key in productTest) {
+				console.log(productTest[key]);
+			}
+		</script>
+	</body>
+</html>

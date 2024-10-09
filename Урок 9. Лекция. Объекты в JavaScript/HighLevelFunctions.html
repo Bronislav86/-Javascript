@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			//-----------------------------MAP-------------------------------
+			/*const studentsPracticeTime = [
+				{
+					firstName: "Ivanov",
+					practiceTime: 56,
+				},
+				{
+					firstName: "Petrov",
+					practiceTime: 120,
+				},
+				{
+					firstName: "Sidorov",
+					practiceTime: 148,
+				},
+				{
+					firstName: "Belkin",
+					practiceTime: 20,
+				},
+				{
+					firstName: "Avdeev",
+					practiceTime: 160,
+				},
+			];
+
+			const dataForTable = studentsPracticeTime.map((student) => {
+				if (studentsPracticeTime < 120) {
+					return {
+						Student: student.firstName,
+						Practice: "Not passed",
+					};
+				} else {
+					return {
+						Student: student.firstName,
+						Practice: "Passed",
+					};
+				}
+			});
+
+			console.table(dataForTable);
+			   */
+			const array = [1, 2, 3, 10, 15];
+
+			console.log(array);
+
+			const arrayUp = array.map((item) => item * 2);
+			console.log(arrayUp);
+			//---------------------------------------------FILTER
+			const filteredArray = array.filter((item) => item >= 10);
+			console.log(filteredArray);
+			//---------------------------------------------REDUCE
+			let reduce1 = array.reduce((a, b) => a + b);
+			console.log(reduce1);
+
+			let reduce2 = array.reduce((a, b) => a + b) / array.length;
+			console.log(reduce2);
+			//---------------------------------------------SOME
+
+			const someArray = array.some((item) => item >= 10);
+			console.log(someArray);
+			console.log(array.some((item) => item >= 20));
+		</script>
+	</body>
+</html>

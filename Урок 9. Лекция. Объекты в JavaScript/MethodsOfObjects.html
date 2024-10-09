@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			// Первая фаза
+
+			// const car = {
+			// 	maker: "Audi",
+			// 	model: "A5",
+			// 	year: 2003,
+			// 	color: "red",
+			// 	pasangers: 2,
+			// 	power: 240,
+			// 	odometer: 0,
+			// 	startEngine: function () {
+			// 		console.log("Engine started");
+			// 	},
+			// };
+
+			// function haveRoadTrip(myCar, distance) {
+			// 	myCar.odometer += distance;
+			// }
+
+			// haveRoadTrip(car, 150);
+			// console.log(car.odometer);
+			// console.log(car.startEngine);
+
+			//Вторая фаза
+
+			const car = {
+				maker: "Audi",
+				model: "A5",
+				year: 2003,
+				color: "red",
+				pasangers: 2,
+				power: 240,
+				odometer: 0,
+				engineIsStarted: false,
+				startEngine: function () {
+					this.engineIsStarted = true;
+				},
+				stopEngine: function () {
+					this.engineIsStarted = false;
+				},
+				haveRoadTrip: function (distance) {
+					if (this.engineIsStarted) {
+						this.odometer += distance;
+					} else {
+						alert("Сначала запустите двигатель!");
+					}
+				},
+			};
+
+			car.startEngine();
+			car.haveRoadTrip(250);
+			console.log(car.odometer);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			//----------------------------------------------------------------Первая фаза
+
+			// const product = {
+			// 	name: "Стол",
+			// 	price: 2000,
+			// 	count: 0,
+			// 	buy: function () {
+			// 		if (product.count > 0) {
+			// 			console.log("Вы купили данный товар");
+			// 		} else {
+			// 			console.log("Товар недоступен для покупки");
+			// 		}
+			// 	},
+			// };
+
+			// product.buy();
+
+			// let productSale = product;
+			// productSale.price = 1500;
+			// let productNew = product;
+			// productNew.text = "Lorem";
+
+			// console.log(productSale);
+			// console.log(product);
+			// console.log(productNew);
+
+			//------------------------------------------------------------Вторая фаза
+
+			const product = {
+				name: "Стол",
+				price: 2000,
+				count: 0,
+				userRegistered: false,
+				registration: function () {
+					this.userRegistered = true;
+				},
+				countProduct: function () {
+					if (this.count > 0) {
+						console.log("Вы можете купилть данный товар");
+					} else {
+						console.log("Товар недоступен для покупки");
+					}
+				},
+				buyProduct: function () {
+					if (this.userRegistered) {
+						console.log("Товар в корзине");
+					} else {
+						console.log("Вам необходимо зарегестрироваться. Сначала выполнить product.registration");
+					}
+				},
+			};
+
+			product.buyProduct();
+			product.registration();
+			product.buyProduct();
+		</script>
+	</body>
+</html>
