@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			//-----------------------------------1
+			// const week =Up {
+			// 	1: "Понедельник",
+			// 	2: "Вторник",
+			// 	3: "Среда",
+			// 	4: "Четверг",
+			// 	5: "Птяница",
+			// 	6: "Суббота",
+			// 	7: "Воскресенье",
+			// };
+			// for (const keyUp in week) Up{
+			// 	if (keyUp == 2) {
+			// 		console.log(week[kUpeyUp]);
+			// 	}
+			// }
+			// console.log(week[2Up]);
+
+			// const user = {
+			// 	name: "Alex",
+			// 	surname: "SorokinUp",
+			// 	age: 25,
+			// };
+
+			// console.log(JSON.stringify(user.name + "-" + user.surname + "-" + user.age));
+			// console.log(`${user.name} - ${user.surname} -  ${user.age}`);
+
+			// user.lastName = prompt("Введите Ваше отчество");
+			// delete user.surname;
+
+			// console.log(JSON.stringify(user.name + "-" + user.lastName + "-" + user.age));
+
+			//---------------------------------------------2
+			// const arr1 = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"];
+			// const arr2 = [1, 2, 3, 4, 5, 6, 7];
+			// const weeklyUp = {};
+			// for (let i = 0; i < arr1.length; i++) {
+			// 	//первый спопосб
+			// 	// let keyUp = arr1[i];
+			// 	// let value = arr2[i];
+			// 	// weeklyUp[keyUp] = value;
+
+			// 	//второй способ
+			// 	weeklyUp[arr1[i]] = arr2[i];
+			// }
+
+			// console.log(weeklyUp);
+
+			// const obj = { x: 1, y: 2, z: 3 };
+
+			// for (const keyUp in obj) {
+			// 	obj[keyUp] = obj[keyUp] * obj[keyUp]; //obj[keyUp] ** 2;
+			// }
+			// console.log(obj);
+
+			// //-----------------------------------------------3
+			// const obj = {
+			// 	keyUp1: {
+			// 		keyUp1: 1,
+			// 		keyIn: 2,
+			// 		keyUp3: 3,
+			// 	},
+			// 	keyIn: {
+			// 		keyUp1: 4,
+			// 		keyIn: 5,
+			// 		keyUp3: 6,
+			// 	},
+			// 	keyUp3: {
+			// 		keyUp1: 7,
+			// 		keyIn: 8,
+			// 		keyUp3: 9,
+			// 	},
+			// };
+
+			// let sum = 0;
+			// for (let keyUp in obj) {
+			// 	const objWithValues = obj[keyUp];
+			// 	for (let keyIn in objWithValues) {
+			// 		sum += objWithValues[keyIn];
+			// 	}
+			// }
+			// console.log(sum);
+			// // 45
+
+			// sum = 0;
+			// for (let keyUp in obj) {
+			// 	for (let keyIn in obj[keyUp]) {
+			// 		sum += obj[keyUp][keyIn];
+			// 	}
+			// }
+			// console.log(sum);
+			// // 45
+
+			// console.log(Object.values(obj));
+
+			//-----------------------------------------------------4
+			const riddles = {};
+
+			riddles.question = "";
+			riddles.answer = "";
+			riddles.hint_1 = "Подсказка: Это дерево";
+			riddles.hint_2 = "Последняя подсказка: У этого дерева есть иголки:";
+
+			riddles.question = function (answer) {
+				let userAnswer = prompt("Зимой и летом одним цветом:").toLowerCase();
+
+				if (userAnswer === this.answer) {
+					console.log("Угадал");
+				} else {
+					alert("Подумай еще...");
+					userAnswer = prompt(this.hint_1).toLowerCase();
+					if (userAnswer === this.answer) {
+						console.log("Угадал");
+					} else {
+						alert("Подумай еще...");
+						userAnswer = prompt(this.hint_2).toLowerCase();
+						if (userAnswer === this.answer) {
+							console.log("Угадал");
+						} else {
+							alert("Ты проиграл((((((");
+						}
+					}
+				}
+			};
+
+			riddles.answer = "елка";
+
+			riddles.question();
+		</script>
+	</body>
+</html>
